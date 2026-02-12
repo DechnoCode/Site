@@ -920,6 +920,364 @@ body {
 
 
 
+/* PORTFOLIIO */
+/* Page Portfolio - Section 1 Hero */
+.portfolio-hero {
+    background: #000;
+    padding: 140px 20px 120px;
+    position: relative;
+    overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.portfolio-hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+}
+
+.portfolio-title {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+
+.portfolio-title h1 {
+    font-size: clamp(4rem, 12vw, 9rem);
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--blanc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin: 0;
+    font-family: var(--police-titre);
+    text-shadow: 0 0 40px rgba(147, 51, 234, 0.6);
+}
+
+.portfolio-title span:last-child {
+    display: block;
+    font-size: 0.85em;
+    letter-spacing: 5px;
+    color: var(--violet-fonce
+    );
+}
+
+/* Décorations */
+.portfolio-decor {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.decor-circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.decor-circle.purple {
+    width: 180px;
+    height: 180px;
+    top: 15%;
+    right: 10%;
+    background: radial-gradient(circle, rgba(147, 51, 234, 0.6) 0%, transparent 70%);
+    animation: floatPurple 6s ease-in-out infinite;
+}
+
+.decor-circle.turquoise {
+    width: 140px;
+    height: 140px;
+    bottom: 20%;
+    left: 12%;
+    background: radial-gradient(circle, rgba(23, 203, 197, 0.6) 0%, transparent 70%);
+    animation: floatTurquoise 7s ease-in-out infinite reverse;
+}
+
+.decor-oval {
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    top: 50%;
+    left: 5%;
+    transform: rotate(-15deg);
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.3), rgba(23, 203, 197, 0.3));
+    border-radius: 50px;
+    opacity: 0.5;
+    animation: slideOval 8s ease-in-out infinite;
+}
+
+/* Portfolio Section 2 - Citation */
+.portfolio-quote {
+    background: #000;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.quote-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.quote-bars {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.quote-bar {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #9333ea, #667eea);
+    border-radius: 2px;
+    position: relative;
+}
+
+.quote-bar::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: inherit;
+    transform: translateY(-50%);
+}
+
+.quote-bar.left::after {
+    left: -10px;
+}
+
+.quote-bar.right::after {
+    right: -10px;
+}
+
+.quote-text {
+    font-family: var(--police-menu);
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 25px;
+    line-height: 1.3;
+    position: relative;
+    z-index: 2;
+}
+
+.quote-text::before,
+.quote-text::after {
+    content: '« »';
+    position: absolute;
+    font-size: 4rem;
+    color: rgba(147, 51, 234, 0.3);
+    font-weight: 100;
+}
+
+.quote-text::before {
+    left: -20px;
+    top: 0;
+}
+
+.quote-text::after {
+    right: -20px;
+    bottom: 0;
+}
+
+.quote-author {
+    font-size: 1.2rem;
+    color: #9333ea;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--police-titre);
+}
+
+/* Portfolio Section 3 - Grille Projets */
+.portfolio-projects {
+    background: #000;
+    padding: 120px 20px;
+}
+
+.projects-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+    background-color: var(--bleu-turquoise);
+}
+
+.project-card {
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 35px 80px rgba(147, 51, 234, 0.3);
+}
+
+.project-image {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.1);
+}
+
+.project-content {
+    padding: 30px;
+}
+
+.project-content h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 12px;
+    font-family: var(--police-titre);
+}
+
+.project-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.project-tech {
+    display: inline-block;
+    background: linear-gradient(135deg, #9333ea, #667eea);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+/* Scroll down */
+.scroll-down {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.scroll-arrow {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 20px solid rgba(147, 51, 234, 0.7);
+    margin: 0 auto;
+    animation: bounce 2s infinite;
+}
+
+
+/* ANIMATIONS */
+@keyframes floatPurple {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-15px) scale(1.05); }
+}
+
+@keyframes floatTurquoise {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.1); }
+}
+
+@keyframes slideOval {
+    0%, 100% { transform: rotate(-15deg) translateX(0); }
+    33% { transform: rotate(-10deg) translateX(10px); }
+    66% { transform: rotate(-20deg) translateX(-5px); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-hero {
+        padding: 100px 20px 80px;
+        min-height: 50vh;
+    }
+    
+    .decor-circle,
+    .decor-oval {
+        display: none; /* Écrans petits */
+    }
+    .portfolio-quote {
+        padding: 60px 20px;
+    }
+    
+    .quote-bars {
+        margin-bottom: 30px;
+    }
+    
+    .quote-bar {
+        width: 45px;
+    }
+    .portfolio-projects {
+        padding: 80px 20px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .project-content {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-hero {
+        padding: 80px 15px 60px;
+    }
+    .quote-text {
+        font-size: 1.6rem;
+    }
+    
+    .quote-author {
+        font-size: 1rem;
+    }
+    .portfolio-projects {
+        padding: 60px 15px;
+    }
+    
+    .project-image {
+        height: 220px;
+    }
+}
+
+
 /* FOOTER */
 .footer {
     background-color: var(--violet-footer);
