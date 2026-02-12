@@ -1109,10 +1109,11 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 40px;
     margin-bottom: 80px;
-    background-color: var(--bleu-turquoise);
+    background-color: var(--noir-fond);
 }
 
 .project-card {
+    background-color: var(--bleu-turquoise);
     border-radius: 25px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
