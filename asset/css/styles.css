@@ -1,14 +1,19 @@
 /* Cross-browser fixes - AJOUTE ÇA EN PREMIER */
 @supports not (backdrop-filter: blur(10px)) {
-    .text-box, .contact-form, .contact-form-full,
-    .hugo-circle, .cta-button {
+    .text-box,
+    .contact-form,
+    .contact-form-full,
+    .hugo-circle,
+    .cta-button {
         background: rgba(0,0,0,0.3) !important;
         backdrop-filter: none !important;
     }
 }
 
 @supports not (display: grid) {
-    .projects-grid, .features-grid, .section1-content {
+    .projects-grid,
+    .features-grid,
+    .section1-content {
         display: flex !important;
         flex-wrap: wrap !important;
     }
@@ -16,14 +21,16 @@
 
 /* Fix Firefox animations */
 @supports (-moz-appearance: none) {
-    .decor-circle, .hugo-circle {
+    .decor-circle,
+    .hugo-circle {
         animation-duration: 8s !important;
     }
 }
 
 /* Safari gradient text fix */
 @supports (-webkit-background-clip: text) {
-    .portfolio-title h1, .section1-title h1 {
+    .portfolio-title h1,
+    .section1-title h1 {
         -webkit-background-clip: text;
     }
 }
