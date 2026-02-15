@@ -798,14 +798,6 @@ body {
     box-shadow: 0 20px 40px rgba(147, 51, 234, 0.5);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    
-}
-
-@media (max-width: 480px) {
-    
-}
 
 
 @keyframes bounce {
@@ -957,6 +949,18 @@ body {
     }
 }
 
+@media (max-width: 425px){
+    .section1-title h1{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 325px){
+    .section1-title h1{
+        font-size: 2rem;
+    }
+}
+
 
 
 /* PORTFOLIIO */
@@ -971,7 +975,7 @@ body {
     align-items: center;
 }
 
-.portfolio-hero-container {
+.portfolio-hero-container { 
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
